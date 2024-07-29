@@ -8,14 +8,6 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -31,3 +23,85 @@ body {
     text-wrap: balance;
   }
 }
+
+/* styles/globals.css */
+.underline-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-animation:hover::after {
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Background Animation */
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.background-animate {
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 15s ease infinite;
+}
+
+/* Additional custom styles */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Ball grid animation */
+@keyframes ballGrid {
+  0%, 100% {
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    transform: scale(0.6);
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.ball {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin: 2px;
+  display: inline-block;
+  animation: ballGrid 1.5s infinite ease-in-out;
+}
+
+.ball:nth-child(1) { animation-delay: 0.1s; }
+.ball:nth-child(2) { animation-delay: 0.2s; }
+.ball:nth-child(3) { animation-delay: 0.3s; }
+.ball:nth-child(4) { animation-delay: 0.4s; }
+.ball:nth-child(5) { animation-delay: 0.5s; }
+/* Continue this for more balls */
