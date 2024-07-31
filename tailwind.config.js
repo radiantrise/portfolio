@@ -12,6 +12,8 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'gradient-to-12': 
+          'background-image: linear-gradient(to bottom, var(--tw-gradient-stops));',
       },
       colors:{
         "primary-purple": "#47026c",

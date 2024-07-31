@@ -3,7 +3,7 @@ import HeroSection from '../components/HeroSection'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='w-screen'>
       <HeroSection/>
     </div>  
   )

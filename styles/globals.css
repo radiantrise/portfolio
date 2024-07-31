@@ -105,3 +105,111 @@ body {
 .ball:nth-child(4) { animation-delay: 0.4s; }
 .ball:nth-child(5) { animation-delay: 0.5s; }
 /* Continue this for more balls */
+
+/* General styles */
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #020103, #160a1f, #020103);
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+.bg-grediant-1{
+  position: absolute;
+  background-image: radial-gradient(ellipse closest-corner at right, #9757e3, #9657e300);
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+
+}
+.overlay {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #5348d4;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    margin: 15px 0;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+.gradient-bg {
+  background-image: linear-gradient(
+  90deg,
+  hsl(267deg 71% 62%) 1%,
+  rgba(255, 255, 255, 0) 50%,
+  rgba(255, 255, 255, 0) 100%
+);
+}
